@@ -1,5 +1,5 @@
 package com.zipcodewilmington.assessment1.part2;
-
+import java.util.;
 /**
  * Created by leon on 2/16/18.
  */
@@ -42,7 +42,15 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+
+        String sentence;
+        String arr[] = sentence.split(" ");
+
+        String firstWord = arr[0];
+        String reverseFirstWord = firstWord.reverse();
+
+        return reverseFirstWord;
+
     }
 
     /**
@@ -51,7 +59,16 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+
+        String sentence;
+        String arr[] = sentence.split(" ");
+
+        String firstWord = arr[0];
+        String reverseFirstWord = firstWord.reverse();
+        String reverseFirstWordThenCamelCase = reverseFirstWord.toUpperCase();
+
+        return reverseFirstWordThenCamelCase;
+        
     }
 
 
