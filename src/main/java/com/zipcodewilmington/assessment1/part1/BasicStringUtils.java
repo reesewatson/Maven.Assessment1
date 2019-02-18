@@ -9,7 +9,10 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+            if (str == null || str.length() == 0) {
+                return str;
+                }
+                return str.substring(0, 1).toUpperCase() + str.substring(1);
     }
 
     /**
@@ -17,7 +20,10 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+
+        StringBuilder builder = new StringBuilder(str);
+        String result = builder.reverse().toString();
+        return result;
     }
 
     /**
@@ -25,7 +31,20 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+
+        StringBuffer res = new StringBuffer();
+
+        String[] strArr = str.split(" ");
+        for (String str : strArr) {
+            char[] stringArray = str.trim().toCharArray();
+            stringArray[0] = Character.toUpperCase(stringArray[0]);
+            str = new String(stringArray);
+
+            res.append(str).append(" ");
+            }
+
+            return res.toString().trim());
+
     }
 
 
@@ -34,7 +53,16 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        String result = "";
+        for(int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) != str) {
+                result = result + str.charAt(i);
+                if(str.charAt(str.length-1) != str) {
+                    result = result + str.charAt(str.lenth-1);
+                }
+            }
+        }
+        return result;
     }
 
     /**
