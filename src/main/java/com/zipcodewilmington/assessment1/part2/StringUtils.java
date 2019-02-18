@@ -11,7 +11,12 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+
+        String sentence;
+        String[] getWords = sentence.split(" ");
+
+        return getWords;
+
     }
 
 
@@ -21,7 +26,14 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+
+        String sentence;
+        String[] getFirstWord = sentence.split(" ");
+        String lastWord = getFirstWord[getFirstWord.length - 1];
+        System.out.println(lastWord);
+
+        return lastWord;
+
     }
 
     /**
