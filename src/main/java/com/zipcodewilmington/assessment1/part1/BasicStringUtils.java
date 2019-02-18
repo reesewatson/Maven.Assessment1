@@ -12,10 +12,10 @@ public class BasicStringUtils {
      */
     public static String camelCase(String str) {
 
-        String str = "the quick brown fox";
-        String strArray[] = str.split(" ");
+        String input = "the quick brown fox";
+        String strArray[] = input.split(" ");
         String firstWord = strArray.charAt(strArray[0]).toUpperCase;
-        String result = firstWord + str.substring(1, str.length);
+        String result = firstWord + input.substring(1, input.length);
 
         return result;
     }
@@ -26,12 +26,12 @@ public class BasicStringUtils {
      */
     public static String reverse(String str) {
 
-        String input = "the quick brown fox";
+        String input2 = "the quick brown fox";
         String rev = "";
 
-        int len = input.length();
+        int len = input2.length();
         for (int i = len - 1; i >= 0; i--) {
-        rev = rev + input.charAt(i);
+        rev = rev + input2.charAt(i);
         }
         return rev;
 
@@ -43,12 +43,12 @@ public class BasicStringUtils {
      */
     public static String reverseThenCamelCase(String str) {
 
-        String input = "the quick brown fox";
+        String input3 = "the quick brown fox";
         String rev = "";
 
-        int len = input.length();
+        int len = input3.length();
         for (int i = len - 1; i >= 0; i--) {
-        rev = rev + input.charAt(i);
+        rev = rev + input3.charAt(i);
         }
         String firstWord = rev.charAt(0).toUpperCase;
         String result = firstWord + rev.substring(1, rev.length);
@@ -63,14 +63,15 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        String input = "The quick brown";
-        String str = " ";
 
-        int length = input.length();
+        String input4 = "The quick brown";
+        String str2 = " ";
+
+        int length = input4.length();
         for(int i = 0; i < length; i++) {
-        str = input.substring(1, length-1);
+        str2 = input4.substring(1, length-1);
         }
-        return str;
+        return str2;
     }
 
     /**
@@ -79,19 +80,16 @@ public class BasicStringUtils {
      */
     public static String invertCasing(String str) {
 
-         String input = "tHE quiCK brOwN";
+        String str3 = "tHE quiCK brOwN";
 
-         int len = input.length();
-         for (int i = 0; i < len; i++) {
-         Character a = input.charAt(i);
+        char[] charArray = str3.toCharArray();
 
-         if (Character.isLowerCase(a))
-         input.replace(i, i + 1, Character.toUpperCase(a) + ""); {
-
-         else {
-         input.replace(i, i + 1, Character.toLowerCase(a) + "");
-        
+        for (int i = 0; i < charArray.length; i++) {
+        if (Character.isUpperCase(charArray[i])) {
+        charArray[i] = Character.toLowerCase(charArray[i]);
+        } else if (Character.isLowerCase(charArray[i])) {
+        charArray[i] = Character.toUpperCase(charArray[i]);
         }
-        return input;
-    }
-
+        return char[] charArray;
+     }
+}
