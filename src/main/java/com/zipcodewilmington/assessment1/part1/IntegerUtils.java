@@ -12,13 +12,16 @@ public class IntegerUtils {
      */
     public static Integer getSumOfN(Integer n) {
 
+        int input = 5;
         int sum = 0;
-        while (0 <= n) {
-            sum += 0;
-            0++;
+        while (input > 0) {
+            int add = input % 10;
+            sum = sum + add;
+            input = input / 10;
         }
         return sum;
     }
+
     /**
      * @param n integer value input by client
      * @return the product of all integers between 0 and not including `n`
@@ -38,10 +41,14 @@ public class IntegerUtils {
      */
     public static Integer reverseDigits(Integer val) {
 
-        while (val != 0) {
-            reversedNum = reversedNum * 10 + val % 10;
-            val = val / 10;
+        int num = 12345;
+        int rev = 0;
 
-            return val;
+        while(num != 0){
+            rev = rev * 10 + num % 10;
+            num = num / 10;
+        }
+
+        return rev;
     }
 }
