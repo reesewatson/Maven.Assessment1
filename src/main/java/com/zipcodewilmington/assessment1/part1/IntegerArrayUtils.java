@@ -1,5 +1,5 @@
 package com.zipcodewilmington.assessment1.part1;
-
+import java.util.stream.*
 /**
  * Created by leon on 2/16/18.
  */
@@ -9,7 +9,9 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
-        return null;
+
+        int sum = IntStream.of(intArray[]).sum();
+        return sum;
     }
 
     /**
@@ -17,7 +19,11 @@ public class IntegerArrayUtils {
      * @return the product of `intArray`
      */
     public static Integer getProduct(Integer[] intArray) {
-        return null;
+
+
+        for (int i = 0; i < intArray.length; i++)
+
+        return arrayProduct(intArray);
     }
 
     /**
