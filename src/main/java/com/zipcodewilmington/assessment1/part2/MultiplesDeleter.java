@@ -10,7 +10,15 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+
+        ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i <= array.length; i++) {
+            if (array[i] % 2 == 0) {
+                list.add(array[i]);
+            }
+        }
+        return list.toArray(new String[list.size()]);
+
     }
 
     /**
@@ -19,7 +27,15 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+
+        ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i <= array.length; i++) {
+            if (array[i] % 2 == 1) {
+                list.add(array[i]);
+            }
+        }
+        return list.toArray(new String[list.size()]);
+
     }
 
     /**
@@ -28,7 +44,15 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+
+        ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i <= array.length; i++) {
+            if (array[i] % 2 == 3) {
+                list.add(array[i]);
+            }
+        }
+        return list.toArray(new String[list.size()]);
+
     }
 
     /**
@@ -38,6 +62,14 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+
+        ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i <= array.length; i++) {
+            if (array[i] % 2 == n) {
+                list.add(array[i]);
+            }
+        }
+        return list.toArray(new String[list.size()]);
+        
     }
 }
