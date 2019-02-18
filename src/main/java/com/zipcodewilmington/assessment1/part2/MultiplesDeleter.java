@@ -1,5 +1,5 @@
 package com.zipcodewilmington.assessment1.part2;
-
+import java.util.ArrayList;
 /**
  * Created by leon on 2/16/18.
  */
@@ -12,9 +12,9 @@ public class MultiplesDeleter {
     public Integer[] deleteEvens(Integer[] ints) {
 
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i <= array.length; i++) {
-            if (array[i] % 2 == 0) {
-                list.add(array[i]);
+        for (int i = 0; i <= ints.length; i++) {
+            if (ints[i] % 2 == 0) {
+                list.add([i]);
             }
         }
         return list.toArray(new String[list.size()]);
@@ -29,9 +29,9 @@ public class MultiplesDeleter {
     public Integer[] deleteOdds(Integer[] ints) {
 
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i <= array.length; i++) {
-            if (array[i] % 2 == 1) {
-                list.add(array[i]);
+        for (int i = 0; i <= ints.length; i++) {
+            if (ints[i] % 2 == 1) {
+                list.add(ints[i]);
             }
         }
         return list.toArray(new String[list.size()]);
@@ -46,9 +46,9 @@ public class MultiplesDeleter {
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
 
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i <= array.length; i++) {
-            if (array[i] % 2 == 3) {
-                list.add(array[i]);
+        for (int i = 0; i <= ints.length; i++) {
+            if (ints[i] % 2 == 3) {
+                list.add(ints[i]);
             }
         }
         return list.toArray(new String[list.size()]);
@@ -64,12 +64,12 @@ public class MultiplesDeleter {
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
 
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i <= array.length; i++) {
-            if (array[i] % 2 == n) {
-                list.add(array[i]);
+        for (int i = 0; i <= ints.length; i++) {
+            if (ints[i] % 2 == n) {
+                list.add(ints[i]);
             }
         }
         return list.toArray(new String[list.size()]);
-        
+
     }
 }

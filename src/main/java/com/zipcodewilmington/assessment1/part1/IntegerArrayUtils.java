@@ -34,10 +34,10 @@ public class IntegerArrayUtils {
 
             int sum = 0;
 
-            while(int i=0; i < intArray[].length; i++)
+            while(int i=0; i < intArray.length; i++)
 
             sum = sum + intArray[i];
-            double getAverage = sum / intArray[].length;;
+            double getAverage = sum / intArray.length;;
 
 
             return getAverage;
