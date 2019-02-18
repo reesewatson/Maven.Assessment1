@@ -30,7 +30,6 @@ public class StringUtils {
         String sentence;
         String[] getFirstWord = sentence.split(" ");
         String lastWord = getFirstWord[getFirstWord.length - 1];
-        System.out.println(lastWord);
 
         return lastWord;
 
@@ -68,7 +67,7 @@ public class StringUtils {
         String reverseFirstWordThenCamelCase = reverseFirstWord.toUpperCase();
 
         return reverseFirstWordThenCamelCase;
-        
+
     }
 
 
@@ -79,7 +78,11 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+
+        String str;
+        str = str.charAt(int index);
+
+        return str;
     }
 
 }
