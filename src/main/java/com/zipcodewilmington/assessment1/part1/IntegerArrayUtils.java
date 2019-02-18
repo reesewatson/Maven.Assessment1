@@ -10,8 +10,9 @@ public class IntegerArrayUtils {
      */
     public static Integer getSum(Integer[] intArray) {
 
-        int sum = IntStream.of(intArray[]).sum();
-        return sum;
+            int sum = IntStream.of(intArray[]).sum();
+
+            return sum;
     }
 
     /**
@@ -21,9 +22,9 @@ public class IntegerArrayUtils {
     public static Integer getProduct(Integer[] intArray) {
 
 
-        for (int i = 0; i < intArray.length; i++)
+            for (int i = 0; i < intArray.length; i++)
 
-        return arrayProduct(intArray);
+            return arrayProduct(intArray);
     }
 
     /**
@@ -38,7 +39,6 @@ public class IntegerArrayUtils {
 
             sum = sum + intArray[i];
             double getAverage = sum / intArray.length;;
-
 
             return getAverage;
     }
