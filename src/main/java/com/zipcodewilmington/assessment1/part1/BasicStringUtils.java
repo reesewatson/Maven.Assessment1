@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment1.part1;
 import java.lang.*;
-import java.lang.StringBuilder;
+import java.lang.String;
+import java.util.*;
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,13 +12,12 @@ public class BasicStringUtils {
      */
     public static String camelCase(String str) {
 
-        StringBuilder value = new StringBuilder()
-                .append(value.substring(0, 1).toUpperCase())
-                .append(value.substring(1))
-                .toString();
+        String str = "the quick brown fox";
+        String strArray[] = str.split(" ");
+        String firstWord = strArray.charAt(strArray[0]).toUpperCase;
+        String result = firstWord + str.substring(1, str.length);
 
-        return value;
-
+        return result;
     }
 
     /**
@@ -26,9 +26,15 @@ public class BasicStringUtils {
      */
     public static String reverse(String str) {
 
-        StringBuilder builder = new StringBuilder(str);
-        String result = builder.reverse().toString();
-        return result;
+        String input = "the quick brown fox";
+        String rev = "";
+
+        int len = input.length();
+        for (int i = len - 1; i >= 0; i--)
+            rev = rev + input.charAt(i);
+
+        return rev;
+
     }
 
     /**
